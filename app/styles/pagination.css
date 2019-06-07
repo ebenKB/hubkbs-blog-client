@@ -1,0 +1,20 @@
+.pagination-centered {
+    text-align: center;
+}
+
+.pagination-centered ul {
+    padding-inline-start: 0;
+}
+
+.pagination li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px;
+    background: #eef1f3;
+    color: var(--white);
+}
+
+.pagination .active {
+    background: var(--white);
+    font-weight: bold;
+}

@@ -1,0 +1,21 @@
+<table class="ui celled table">
+    <thead>
+      <tr>
+        {{#each rows as |row| }}
+          <th> {{row}} </th>
+        {{/each}}
+      </tr>
+    </thead>
+    <tbody>
+      {{#each tableContent as |content| }}
+          <tr class="">
+              {{!-- <td>{{svg-jar "dustbin" width="15px" height="15px"}} </td> --}}
+              <td>[ ]</td>
+              <td> {{content.title}} </td>
+              <td>{{content.postCaption}}</td>
+              <td></td>
+              <td></td>
+          </tr>
+      {{/each}}
+    </tbody>
+</table>

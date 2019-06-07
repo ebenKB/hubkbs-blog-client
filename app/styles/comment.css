@@ -1,0 +1,61 @@
+.comment {
+    display: inline-flex;
+    align-self: center;
+    flex-flow: row;
+    flex-wrap: wrap;
+}
+
+.comment-container {
+    width: 80%;
+    margin: auto;
+}
+
+.comment-container .btn-custom {
+    padding: 25px;
+    margin: auto;
+    background: var(--white);
+    border: 1px solid var( --btn-primary__color);
+    color: var( --btn-primary__color);
+    border-radius: 3px;
+}
+
+.comment-content__caption {
+    padding: 25px 25px 25px 25px;
+    border: 1px solid rgba(0,0,0,.09);
+    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+    border-radius: 3px;
+}
+
+.comment svg {
+   height: 25px;
+}
+
+
+.comment-card {
+    padding: 20px 20px;
+    border-radius: 3px;
+}
+
+.custom-grid {
+    display: grid;
+    grid-template-columns: 3fr 9fr;
+    grid-template-rows: auto;
+    grid-column-gap: 10px;
+}
+
+.faint-outline {
+    border: 1px solid rgba(0,0,0,.09);
+    box-shadow: 0 1px 4px rgba(0,0,0,.04);
+}
+
+.inline-editor textarea {
+    outline: 0;
+    border: 0;
+    min-width: 480px;
+    max-width: 480px;
+    max-height: 220px;
+}
+
+.expanded + .inline-editor {
+    display: block;
+}

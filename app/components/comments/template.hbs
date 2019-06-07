@@ -1,0 +1,30 @@
+<div class="comment-container p-b-50">
+    <h3>Comments</h3>
+    <div class="comment-content__caption" >
+        <div class="comment clickable" role="button">
+            <span class="cta">{{svg-jar "speech-bubble"}} 
+                <span class="expanded m-t-5 m-l-10" role="button" {{action 'showCommentText' }} >Write comment...</span>
+                <div class="inline-editor">
+                    <textarea name="" id=""  rows="10" class=""></textarea>
+                    <div>
+                        <button class="rounded btn primary" {{action 'createComment'}} >Publish</button>
+                        <button class="rounded btn">Cancel</button>
+                    </div>
+                </div>
+            </span> 
+        </div>
+    </div>
+    {{#unless canShowComment}}
+        <div class="m-t-50 m-b-50">
+             <div role="button" class="clickable btn-custom text-center" {{action 'toggleComments'}}>Show All Comments</div>
+        </div>
+    {{/unless}}
+    {{#if canShowComment}}
+        <div class="m-t-50">
+            {{#each comments as |comment|}}
+                <Comment-Card 
+                    @comment={{comment}} />
+            {{/each}}
+        </div>
+    {{/if}}
+</div>

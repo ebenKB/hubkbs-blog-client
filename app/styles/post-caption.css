@@ -1,0 +1,26 @@
+.post-img {
+    display: block;
+    /* height: 256px; */
+}
+
+.post-caption {
+
+}
+
+.left {
+    background: url('/images/broken.jpg');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.right {
+    background: url('/images/ember-photo.jpeg');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.post-content {
+    width: 100%;
+}

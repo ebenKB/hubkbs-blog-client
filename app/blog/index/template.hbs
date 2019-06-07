@@ -1,0 +1,18 @@
+<h1>BLOG INDEX PAGE</h1>
+<Layout @classes="container margin-auto">
+    <Caption @caption="Blogs"  @sub-content="Read our blogs, capture the sense of emotions, and have a good reason to continue reading." />
+    <Hero />
+    <h2 class="m-t-40">Latest</h2>
+    <div class="grid equal-columns__2 grid-gap__30 bdr-btn">
+        <PostCaption @type="left" />
+        <PostCaption @type="right" />
+    </div>
+    <div class="grid equal-columns__2 grid-gap__30 m-t-40 bdr-btn">
+        <div class="md-wrapper">
+            <Post @post='post' />
+            <button class="m-t-50 m-b-50 btn primary rounded">Load More</button>
+        </div>
+        <div></div>
+    </div>
+</Layout>
+{{outlet}}

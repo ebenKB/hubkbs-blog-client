@@ -1,0 +1,19 @@
+:root {
+    --white: #fff;
+    --dark: #22292f;
+    --light: rgba(34, 41, 47, 0.6);
+    --btn-primary__color: #3490dc;
+    --btn-primary__color-light: rgba(52, 144, 220, 0.7);
+
+    --ap-gray: #494F57;
+    --ap-gray-deep: #515254;
+    --ap-black:#000;
+    --ap-blue:#385DF7;
+    --ap-lt-blue:#2868D4;
+    --ap-lt-gray:rgba(126, 135, 160,1);
+    --ap-offwhite:#D1D4D6;
+    --ap-white:#fff;
+    --ap-sea-blue:#4796EA;
+    --ap-faint-gray:rgba(183, 194, 205,0.3);
+    --ap-warning:rgb(255, 208, 0);
+  }

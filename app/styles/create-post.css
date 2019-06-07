@@ -1,0 +1,28 @@
+.form-wrapper {
+    width: 80%;
+    margin: auto;
+}
+
+.form-wrapper form .input {
+    width: 100%;
+}
+
+/* overrride semantic ui */
+.ui.input > input {
+    padding: 15px 15px;
+    margin-bottom: 25px;
+    width: 50%;
+}
+
+.ui.selection.dropdown {
+    padding: 15px;
+    /* width: 50%; */
+}
+
+.ui.button {
+    padding: 15px;
+}
+
+.ui.input.input-block {
+    display: inline-block;
+}

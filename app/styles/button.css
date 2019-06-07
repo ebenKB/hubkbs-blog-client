@@ -1,0 +1,20 @@
+.btn {
+    padding: 10px 20px;
+}
+
+.primary {
+    background: var(--btn-primary__color);
+    color: var(--white);
+}
+
+.rounded {
+    border-radius: 5px;
+}
+
+.primary:hover {
+    background: var(--btn-primary__color-light);
+}
+
+.btn:focus {
+    outline: none;
+}

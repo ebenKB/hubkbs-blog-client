@@ -1,0 +1,13 @@
+<div class="comment-card faint-outline m-b-10">
+    <div class="custom-grid container-very-small__left grid-center">
+        <div class="one">
+            <div class="img-holder"> {{ svg-jar "user" class="img-fit" }} </div>
+        </div>
+        <div class="two">
+            <div> {{comment.user.firstname}} </div>
+            <div> {{comment.createdAt}} </div>
+        </div>
+    </div>
+    <p> {{comment.text}} </p>
+    <div> {{svg-jar "like" style="height: 20px;" }} 8</div>
+</div>

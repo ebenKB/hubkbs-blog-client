@@ -1,0 +1,35 @@
+<div class="dashboard-header">
+    <h2>Dashboard</h2>
+</div>
+<div class="dashboard-wrapper grid columns-2__14">
+  <div class="dashboard-left__pane ">
+      <Dashboard-Item @name="Posts" />
+      <Dashboard-Item @name="Comments" />
+      <Dashboard-Item @name="Users" />
+  </div>
+  <div class="margin-l-r__center container">
+    <div class="dashboard-main__action">
+      <div class="ui input">
+        <FormFields::Input 
+            @value={{title}}
+            @placeholder="Enter the search term"
+            @classNames="ui input wd-500"
+        />
+        <FormFields::Input 
+            @value={{limit}}
+            @placeholder="Search Limit"
+            @classNames="ui input"
+        />
+      </div>
+       <FormFields::Dropdown 
+          @heading="Filter By:"
+          @options={{filter}}
+        />
+      <div class="ui button btn green">Create Post</div>
+    </div>
+    <FormFields::Table 
+        @rows={{rows}}
+        @tableContent={{model.posts}}
+    />
+  </div>
+</div>

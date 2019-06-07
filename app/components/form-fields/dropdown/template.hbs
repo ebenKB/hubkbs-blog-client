@@ -1,0 +1,13 @@
+<div>
+    {{#ui-dropdown class="selection"}}
+        <div class="default text">{{heading}}</div>
+        <i class="dropdown icon"></i>
+        <div class="menu">
+            {{#each options as |option|}}
+                <div class="item">
+                  {{option}}
+                </div>
+            {{/each}}
+        </div>
+    {{/ui-dropdown}}
+</div>

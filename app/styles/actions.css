@@ -1,0 +1,12 @@
+.action-group {
+    position: fixed;
+    height: 90px;
+    width: 30px;
+    top: 40%;
+    left: 15%;
+    padding: 20px;
+}
+
+.blog-actions svg {
+    padding: 10px;
+}

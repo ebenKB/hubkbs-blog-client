@@ -1,0 +1,18 @@
+<Layout @classes="container-very-small margin-auto"> 
+		<div class="col-60 title p-t-50 bdr-btn">
+				<h2 class="text-center"> {{ model.title }} </h2>
+		</div>
+		<div class="blog-image p-t-50">
+				<img src=" {{model.image}} " alt="" class="img-fit">
+		</div>
+		<div class="blog-content p-t-50 p-b-50code">
+				<p> {{model.body}}</p>
+		</div>
+		<Comments @comments={{model.comments}}
+				@canShowComment={{canShowComment}} 
+				@toggleComments={{action "toggleComments"}}
+				@showCommentText={{action "showCommentText"}} 
+				@createComment={{action "createComment"}} />
+		<Actions />
+</Layout>
+

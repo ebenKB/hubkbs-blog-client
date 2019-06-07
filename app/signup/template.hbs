@@ -1,0 +1,27 @@
+<Layout>
+		<div class="container margin-auto grid grid-center auto auto-columns__3">
+				<div class="two">
+						<a href="#">
+								<img src="http://www.moneydigest.sg/wp-content/uploads/2017/01/WAtsons-BOGO.png" alt="">
+						</a>
+				</div>
+				<div class="one">
+						<div class="form-wrapper">
+								<h2>CREATE NEW ACCOUNT</h2>
+								<form action="" class="user-form">
+										{{input value=firstname placeholder="firstname" }}
+										{{input value=lastname placeholder="lastname"}}
+										{{input value=email placeholder="email"}}
+										{{input value=contact placeholder="contact"}}
+										{{input value=password placeholder="password" type="password"}}
+										{{input value=confirmpassword placeholder="password" type="password"}}
+										<button class="rounded btn primary" {{action "signup"}}>Submit</button>
+								</form>
+								<h5>
+										Already have an account?
+										<span> <a href="#">signin</a> </span>
+								</h5>
+						</div>
+				</div>
+		</div>
+</Layout>

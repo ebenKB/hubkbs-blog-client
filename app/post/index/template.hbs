@@ -1,0 +1,20 @@
+<Layout @classes="container margin-auto">
+		<Caption @caption="Blogs"  @sub-content="Read our blogs, capture the sense of emotions, and have a good reason to continue reading." />
+		<Hero />
+		<h2 class="m-t-60 m-b-60">Recent Posts </h2>
+		<div class="grid equal-columns__2 grid-gap__30 bdr-btn">
+				{{#each recentPost as |recent| }}
+					<PostCaption @type="left" @post={{recent}} />
+				{{/each}}
+		</div>
+		<div class="grid equal-columns__2 grid-gap__30 m-t-40 bdr-btn">
+				<div class="md-wrapper">
+						{{#each paginatedPosts as  |post|}}
+								<Post @post={{post}} />
+						{{/each}}
+						{{ page-numbers content=paginatedPosts }}
+				</div>
+				<div></div>
+		</div>
+</Layout>
+{{!-- {{outlet}} --}}
