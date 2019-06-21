@@ -14,9 +14,14 @@ Router.map(function() {
   // this.route('post', function() {
   //   this.route('show');
   // });
-  this.route('signin');
+  this.route('login');
   this.route('signup');
   this.route('dashboard');
+  this.route('protected');
+  // put all the authenticated routes here
+  this.route('authenticated', { path: '/authenticated' }, () => {
+
+  });
 });
 
 export default Router;

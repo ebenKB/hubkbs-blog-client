@@ -1,11 +1,11 @@
 <div class="dashboard-header">
-    <h2>Dashboard</h2>
+  <h2>Dashboard</h2>
 </div>
 <div class="dashboard-wrapper grid columns-2__14">
   <div class="dashboard-left__pane ">
-      <Dashboard-Item @name="Posts" />
-      <Dashboard-Item @name="Comments" />
-      <Dashboard-Item @name="Users" />
+    <Dashboard-Item @name="Posts" />
+    <Dashboard-Item @name="Comments" />
+    <Dashboard-Item @name="Users" />
   </div>
   <div class="margin-l-r__center container">
     <div class="dashboard-main__action">
@@ -21,11 +21,15 @@
             @classNames="ui input"
         />
       </div>
-       <FormFields::Dropdown 
-          @heading="Filter By:"
-          @options={{filter}}
-        />
+      <FormFields::Dropdown 
+        @heading="Filter By:"
+        @options={{filter}}
+      />
       <div class="ui button btn green">Create Post</div>
+      
+    </div>
+    <div class="actions p-b-10 p-t-10">
+      <div> {{svg-jar "dustbin" width="15px" height="15px"}} </div>
     </div>
     <FormFields::Table 
         @rows={{rows}}

@@ -7,11 +7,11 @@
 				</div>
 				<div class="one">
 						<div class="form-wrapper">
-								<h2>signin</h2>
+								<h2>login</h2>
 								<form action="" class="user-form">
-										{{input value=""  placeholder="email"}}
-										{{input value="" placeholder="password" type="password"}}
-										<button class="rounded btn primary" type="submit" {{action "signin"}}>Submit</button>
+										{{input value=email  placeholder="email"}}
+										{{input value=password placeholder="password" type="password"}}
+										<button class="rounded btn primary" type="submit" {{action "authenticate"}}>Submit</button>
 								</form>
 								<h5>
 										Don't have an account?

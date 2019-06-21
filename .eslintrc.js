@@ -15,6 +15,7 @@ module.exports = {
     browser: true
   },
   rules: {
+
   },
   overrides: [
     // node files
@@ -37,6 +38,6 @@ module.exports = {
         browser: false,
         node: true
       }
-    }
+    },
   ]
 };

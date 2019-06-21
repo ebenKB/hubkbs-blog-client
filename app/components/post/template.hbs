@@ -1,17 +1,20 @@
-{{yield}}
+{{!-- {{yield}} --}}
 <div class="post-content bdr-btn">
-    {{#link-to "post.show" post.id class="post-heading grid auto auto-columns__3 grid-center p-t-10"}}
-        <div class="two">
-            <h2 class=" brighten">{{post.title}} </h2>
-        </div>
-        <div class="one">
-            <img src="{{post.image}}" alt="" class="rounded img-xl__pad-right">
-        </div>
-    {{/link-to}}
-    <div class="caption brighten">
-        By: {{post.author.firstname}} {{post.author.lastname}}
-    </div>
-    <p class="brighten">
-        {{post.postCaption}}
-    </p>
+		{{#link-to "post.show" post.id class="post-heading grid auto auto-columns__3 grid-center p-t-10"}}
+				<div class="two">
+						<h2 class=" brighten">{{post.title}} </h2>
+				</div>
+				<div class="one">
+						<img src={{post.image}} alt="" class="rounded img-xl__pad-right">
+				</div>
+		{{/link-to}}
+		<div class="caption brighten">
+				By: {{post.author.firstname}} {{post.author.lastname}}
+		</div>
+		<div class="caption brighten m-b-20">
+				{{moment-format post.createdAt  "ddd, MMM d ha"}}
+		</div>
+		<p class="brighten">
+				{{post.postCaption}}
+		</p>
 </div>

@@ -18,3 +18,9 @@
 .btn:focus {
     outline: none;
 }
+
+.btn:disabled {
+    background: transparent;
+    color:rgba(0, 0, 0, 0.5);
+    cursor:not-allowed
+}

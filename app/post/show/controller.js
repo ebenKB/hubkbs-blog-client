@@ -11,11 +11,11 @@ export default Controller.extend({
         },
 
         showCommentText(){
-            console.log('you want to show comment text');
+
         },
 
         createComment(){
-            console.log('you want to create comment')
+
         }
     }
 });

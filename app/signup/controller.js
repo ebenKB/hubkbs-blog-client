@@ -9,7 +9,6 @@ export default Controller.extend({
 
     actions: {
         signup() {
-            console.log('this is the contact', this.contact)
             const user = {
                 firstname: this.firstname,
                 lastname: this.lastname,
@@ -18,7 +17,6 @@ export default Controller.extend({
                 password: this.password,
             }
            const created =this.store.createRecord('user', user);
-           console.log(user)
            created.save();
         }
     },

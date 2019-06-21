@@ -9,7 +9,6 @@ export default Component.extend({
             this.get('showCommentText')();
         },
         createComment() {
-            console.log('you want to create a new comment');
         }
     }
 });

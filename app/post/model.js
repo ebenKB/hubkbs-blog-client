@@ -9,6 +9,7 @@ export default DS.Model.extend({
     author: DS.belongsTo('user'),
     comments: DS.hasMany('comment'),
     likes: DS.attr(),
+    category: DS.attr('string'),
 
     postCaption: computed('body', function() {
         // trim off excess content and show just a summary of the post body

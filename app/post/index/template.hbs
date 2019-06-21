@@ -4,7 +4,7 @@
 		<h2 class="m-t-60 m-b-60">Recent Posts </h2>
 		<div class="grid equal-columns__2 grid-gap__30 bdr-btn">
 				{{#each recentPost as |recent| }}
-					<PostCaption @type="left" @post={{recent}} />
+						<PostCaption @type="left" @post={{recent}} />
 				{{/each}}
 		</div>
 		<div class="grid equal-columns__2 grid-gap__30 m-t-40 bdr-btn">
@@ -17,4 +17,3 @@
 				<div></div>
 		</div>
 </Layout>
-{{!-- {{outlet}} --}}

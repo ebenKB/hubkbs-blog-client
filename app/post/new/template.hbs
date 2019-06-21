@@ -1,26 +1,56 @@
 <div class="margin-auto container">
 		<div class="margin-l-r__center container grid">
-			<div class="form-wrapper p-t-100">
+				<div class="form-wrapper p-t-100">
 						<h2 class="p-b-30 p-t-30">Create New Blog Post</h2>
-					<form>
-							<div class="ui input">
-									<FormFields::Input
-											@value={{title}}
-											@placeholder="What is the title of the post"
-											@onChange={{action (mut title)}}
-											@classNames="ui input"
-									/>
-							</div>
-							<div class="ui input input-block">
-										<label for="image">Please select an image for the post</label>
-										<FormFields::File />
-							</div>
-							<FormFields::Dropdown @heading="Category"/>
-							<div class="m-t-50">
-									{{pell-editor value=body onChange=(action (mut body)) pellOptions=options}}
-							</div>
-							<button class="rounded btn primary m-t-40" {{action "createPost"}}>Create Post</button>
-					</form>
-			</div>
+						{{#with (changeset model.posts PostValidator) as |changeset|}}
+								<form>
+										<div class="ui input">
+												<FormFields::Input
+														@property="title"
+														@placeholder="What is the title of the post"
+														@onChange={{action "validate" }}
+														@classNames="ui input"
+														@changeset={{changeset}}
+												/>
+										</div>
+										<div class="ui input input-block">
+												<label for="image">Please select an image for the post</label>
+												<FormFields::File 
+														@inputID="postImage"
+														@onChange={{action "fileChange" }}
+												/>
+										</div>
+										<FormFields::Dropdown 
+												@heading="Add a Category"
+												@options={{model.categories}}
+												@property={{category}}
+												@dataValue="name"
+												@changeset={{changeset}}
+										/>
+										{{!-- <FileUpload
+												@name="image" 
+												@accept="image/jpg"
+												@onfileadd={{action "uploadImage" }} as |queue|>
+												<a class="rounded btn primary">
+													{{#if queue.files.length}}
+														Uploading ....
+													{{else}}
+															upload file
+													{{/if}}
+												</a>
+										</FileUpload> --}}
+										<div class="m-t-50">
+												<FormFields::wysiwyg 
+														@property="body"
+														@changeset={{changeset}}
+												/>
+										</div>
+										<button class="rounded btn default m-r-10" {{action "rollback" changeset }}>Cancel</button>
+										<button class="rounded btn primary m-t-40" {{action "createPost" changeset}} disabled={{changeset.isInvalid}}>Create Post</button>
+								</form>
+						{{/with}}
+
+						
+				</div>
 		</div>
 </div>

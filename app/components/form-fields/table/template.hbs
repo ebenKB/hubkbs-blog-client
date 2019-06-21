@@ -9,12 +9,11 @@
     <tbody>
       {{#each tableContent as |content| }}
           <tr class="">
-              {{!-- <td>{{svg-jar "dustbin" width="15px" height="15px"}} </td> --}}
               <td>[ ]</td>
               <td> {{content.title}} </td>
               <td>{{content.postCaption}}</td>
-              <td></td>
-              <td></td>
+              <td> {{content.author.firstname}} </td>
+              <td>{{moment-from-now content.createdAt}} </td>
           </tr>
       {{/each}}
     </tbody>

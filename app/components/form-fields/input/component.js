@@ -6,9 +6,11 @@ export default Component.extend({
   type: 'text',
   name:null,
   classNames: '',
+  changeset:null,
+  property: null,
   actions: {
-    onChange(){
-      this.get('onChange')();
+    onChange(changeset){
+      this.get('onChange')(changeset);
     }
   }
 });

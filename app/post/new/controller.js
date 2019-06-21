@@ -1,16 +1,41 @@
 import Controller from '@ember/controller';
+import { get,set } from '@ember/object';
+import PostValidator from '../../validations/post';
 
 export default Controller.extend({
-    body : '<h3>Body of the blog post is here again...</h3>',
-    title:'', 
+	PostValidator,
+    body : null,
+    title: null,
+    image: null,
+    author: null,
+		category: null,
     // eslint-disable-next-line ember/avoid-leaking-state-in-ember-objects
     options: {
 
     },
 
-    actions: {
-        createPost() {
-            console.log('you want to create a new post')
-        }
-    }
+	actions: {
+			createPost(changeset) {
+					changeset.validate()
+						.then(() => {
+							const file = document.getElementById('postImage').files[0];
+							set(changeset, 'image', file);
+							return changeset.save();
+					});
+			},
+
+			rollback(changeset) {
+				return changeset.rollback();
+			},
+
+			validate({ key, newValue, oldValue, changes, content }) {
+			},
+
+			fileChange() {
+			},
+
+			uploadImage(file){
+				get(this, 'upload').perform(file);
+			}
+	},
 });
