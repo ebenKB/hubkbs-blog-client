@@ -3,13 +3,15 @@
     <div class="comment-content__caption" >
         <div class="comment clickable" role="button">
             <span class="cta">{{svg-jar "speech-bubble"}} 
-                <span class="expanded m-t-5 m-l-10" role="button" {{action 'showCommentText' }} >Write comment...</span>
+                <span class="expanded m-t-5 m-l-10" role="button" {{action 'canWriteComment' }} >Write comment...</span>
                 <div class="inline-editor">
-                    <textarea name="" id=""  rows="10" class=""></textarea>
+                  {{#if canWriteComment }}
+                     {{textarea value=newComment cols="5" rows="10" keyUp=(mut comment)}}
                     <div>
-                        <button class="rounded btn primary" {{action 'createComment'}} >Publish</button>
+                        <button class="rounded btn primary" {{action 'createComment' post}} >Publish</button>
                         <button class="rounded btn">Cancel</button>
                     </div>
+                  {{/if}}
                 </div>
             </span> 
         </div>
@@ -21,7 +23,7 @@
     {{/unless}}
     {{#if canShowComment}}
         <div class="m-t-50">
-            {{#each comments as |comment|}}
+            {{#each post.comments as |comment|}}
                 <Comment-Card 
                     @comment={{comment}} />
             {{/each}}

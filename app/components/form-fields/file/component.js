@@ -6,8 +6,8 @@ export default Component.extend({
   inputID:null,
 
   actions: {
-    onChange(){
-      this.get('onChange')();
-    }
+      onChange(){
+        this.get('onChange')();
+      }
   }
 });

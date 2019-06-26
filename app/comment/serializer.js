@@ -4,13 +4,13 @@ import DS from 'ember-data';
 export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
     primaryKey: '_id',
     attrs: {
-        user: { embedded: 'always' }
-    }
+      user: {
+        serialize: 'ids',
+        deserialize: 'ids'
+      }
+    },
+    // attrs: {
+    //     // user: { embedded: 'always' }
+    //     user: { serialize: 'records' , deserialize: 'records'},    
+    // }
 });
-
-// export default DS.RESTSerializer.extend({
-//     primaryKey : '_id',
-//     attrs: {
-//         user: { embedded: 'always' } 
-//     }
-// });

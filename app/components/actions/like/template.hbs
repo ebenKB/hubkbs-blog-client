@@ -1,0 +1,9 @@
+<div class="action-group slide-in_left">
+     <div class="blog-actions">
+        <div class="inline" role="button" {{action 'likePost' post}} > 
+            {{svg-jar "love"  style="width: 40px;" }}
+            <span class="m-t-10"> {{ post.likes.length }} </span>
+        </div>
+        <div role="button" {{action 'likePost' post}} >{{svg-jar "speech-bubble" style="width: 20px;"}}</div>
+    </div>
+</div>

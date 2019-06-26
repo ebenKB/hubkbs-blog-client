@@ -125,7 +125,7 @@ a {
 }
 
 .container-very-small {
-    width: 40%;
+    width: 35%;
     margin: auto;
 }
 
@@ -155,6 +155,11 @@ a {
 .col-60 {
     width: 60%;
     margin: auto;
+}
+
+.col-70 {
+  width: 70%;
+  margin: auto;
 }
 
 .bdr-btn {

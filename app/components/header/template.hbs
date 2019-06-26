@@ -1,4 +1,3 @@
-{{yield}}
 <div class="container margin-auto p-t-40 p-b-40 grid equal-columns__2 center md-text">
 	<div>
 		<div class="logo">
@@ -13,13 +12,32 @@
 			<li>
 				<a href="#">Blogs</a>
 			</li>
-			<li>
-				{{#if session.isAuthenticated }} 
-						<a {{action 'invalidateSession' }}>Logout</a>
-						{{else}}
-							{{#link-to 'login'}}Login{{/link-to}}
-				{{/if}}
-			</li>
+      <li>
+        {{#if session.isAuthenticated }}
+         <div class="ui top left pointing dropdown teal circular icon button">EA
+            <i class="teal circular label"></i>
+            <div class="menu" style="left: 0;">
+              <div class="header">{{currentUser.user.firstname}} {{currentUser.user.lastname}} </div>
+            <div class="item">
+              {{#link-to 'dashboard' }}Dashboard{{/link-to}}
+            </div>
+            <div class="item">
+                {{#link-to 'post.new' class=""}}New Post{{/link-to}}
+            </div>
+            <div class="item">
+                {{#if session.isAuthenticated }} 
+                    <a {{action 'invalidateSession' }}>Logout</a>
+                    {{else}}
+                      {{#link-to 'login'}}Login{{/link-to}}
+                {{/if}}
+            </div>
+            </div>
+          </div>
+          {{else}}
+          {{#link-to 'login'}}Sign in{{/link-to}}
+          {{#link-to 'signup' class="m-l-10 ui rounded button primary teal"}}Get Started{{/link-to}}
+        {{/if}}
+      </li>
 		</ul>
 	</div>
 </div>

@@ -11,16 +11,21 @@ Router.map(function() {
     this.route('show', { path: '/posts/:id'});
     this.route('new', { path: 'posts/new'});
   });
-  // this.route('post', function() {
-  //   this.route('show');
-  // });
   this.route('login');
   this.route('signup');
   this.route('dashboard');
   this.route('protected');
-  // put all the authenticated routes here
-  this.route('authenticated', { path: '/authenticated' }, () => {
 
+  this.route('authenticated', { path: '/auth'}, function() {
+    // this.route('post', {
+    //   resetNamespace: true,
+    // }, function() {
+    //   this.route('new');
+    // });
+
+    // this.route('dashboard', {
+    //   resetNamespace: true
+    // })
   });
 });
 
