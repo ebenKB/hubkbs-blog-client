@@ -68,7 +68,7 @@ h1 {
 }
 
 h2 {
-    font-family: "maisonNeueBold";
+    font-family: "AvenirNext";
 }
 
 p {
@@ -99,15 +99,16 @@ a {
 }
 
 .title h2 {
-    font-size: 2.5rem;
+    font-size: 3.0rem;
+    font-weight: 600;
 }
 
 .light-caption {
-    color: var(--light-caption);
+    color: var(--ap-lt-gray);
 }
 
 .light-caption * {
-    color: var(--light-caption)
+    color: var(--ap-lt-gray)
 }
 
 .brighten {
@@ -115,7 +116,7 @@ a {
 }
 
 .container {
-    width: 70%;
+    width: 65%;
     padding: 0 40px;
 }
 
@@ -125,7 +126,7 @@ a {
 }
 
 .container-very-small {
-    width: 35%;
+    width: 40%;
     margin: auto;
 }
 
@@ -163,7 +164,7 @@ a {
 }
 
 .bdr-btn {
-    border-bottom: 2px solid #dae1e7;
+    border-bottom: 1px solid #dae1e7;
 }
 
 .small-bdr {
@@ -182,6 +183,7 @@ a {
 
 .caption {
     font-size: 1.25rem;
+    line-height: 1.5;
 }
 
 @media only screen and (max-width:768px){

@@ -1,9 +1,6 @@
-{{!-- {{yield}} --}}
 <div class="post-caption">
-    <a href="#" class="post-img p-all-30">
+    <a href="posts/{{post.id }}" class="post-img p-all-30">
         <img src={{post.image}} alt="" class="rounded">
-    </a>
-    <a href="#"> 
         <h2 class="brighten"> {{post.title}} </h2>
     </a>
     <div class="caption brighten">
@@ -11,7 +8,7 @@
     </div>
     <div class="post-content md-wrapper brighten">
         <p>
-            {{ post.postCaption }}
+            {{{ post.postCaption }}}
         </p>
     </div>
 </div>

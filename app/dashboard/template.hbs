@@ -1,4 +1,4 @@
-<Layout @classes="container margin-auto">
+<Layout @classes="margin-auto">
     <div class="dashboard-header">
       <h2>Dashboard</h2>
     </div>
@@ -14,7 +14,7 @@
             <FormFields::Input 
                 @value={{title}}
                 @placeholder="Enter the search term"
-                @classNames="ui input wd-500"
+                @classNames="ui input wd-400"
             />
             <FormFields::Input 
                 @value={{limit}}
@@ -26,7 +26,7 @@
             @heading="Filter By:"
             @options={{filter}}
           />
-          {{#link-to 'post' class="ui button btn green"}}Create Post{{/link-to}}
+          {{#link-to 'post.new' class="ui button btn green"}}New Post{{/link-to}}
         </div>
         <div class="actions p-b-10 p-t-10">
           <div> {{svg-jar "dustbin" width="15px" height="15px"}} </div>

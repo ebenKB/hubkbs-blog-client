@@ -24,3 +24,7 @@
 .post-content {
     width: 100%;
 }
+
+.blog-content {
+  padding: 0 40px;
+}

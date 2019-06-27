@@ -254,6 +254,42 @@
   grid-template-columns: 6fr 10fr;
 }
 
+.columns-7__9 {
+  grid-template-columns: 7fr 9fr;
+}
+
+.columns-8__8 {
+  grid-template-columns: 8fr 8fr;
+}
+
+.columns-9__8 {
+  grid-template-columns: 9fr 8fr;
+}
+
+.columns-10__6 {
+  grid-template-columns: 10fr 6fr;
+}
+
+.columns-11__5 {
+  grid-template-columns: 11fr 5fr;
+}
+
+.columns-12__4 {
+  grid-template-columns: 12fr 4fr;
+}
+
+.columns-13__3 {
+  grid-template-columns: 13fr 3fr;
+}
+
+.columns-14__2 {
+  grid-template-columns: 14fr 2fr;
+}
+
+.columns-15__1 {
+  grid-template-columns: 15fr 1fr;
+}
+
 .grid .rows__2 {
   grid-template-rows: 2;
   grid-row-gap: 10px;

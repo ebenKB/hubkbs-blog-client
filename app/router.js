@@ -10,6 +10,7 @@ Router.map(function() {
   this.route('post', { path: '/' }, function() {
     this.route('show', { path: '/posts/:id'});
     this.route('new', { path: 'posts/new'});
+    this.route('edit', { path: 'posts/:id/edit'});
   });
   this.route('login');
   this.route('signup');
@@ -17,15 +18,8 @@ Router.map(function() {
   this.route('protected');
 
   this.route('authenticated', { path: '/auth'}, function() {
-    // this.route('post', {
-    //   resetNamespace: true,
-    // }, function() {
-    //   this.route('new');
-    // });
-
-    // this.route('dashboard', {
-    //   resetNamespace: true
-    // })
+    // this.route('post',  { path: 'posts/new', resetNamespace: true });
+    // this.route('edit', { path: 'posts/:id/edit'});
   });
 });
 

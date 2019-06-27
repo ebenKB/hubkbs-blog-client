@@ -1,13 +1,15 @@
-<div class="comment-card faint-outline m-b-10">
-    <div class="custom-grid container-very-small__left grid-center">
-        <div class="one">
-            <div class="img-holder"> {{ svg-jar "user" class="img-fit" }} </div>
+<div class="comment-card faint-outline m-b-20">
+    <div class="container-very-small__lefts">
+      <div class="grid columns-2__14 grid-center">
+        <div class="img-holder"> {{ svg-jar "user" class="img-xxl" }} </div> 
+        <div class="light-caption">
+          <div> {{comment.user.firstname}} {{comment.user.lastname}} </div>
+          <div>{{moment-format comment.createdAt  "ddd, MMM d"}} </div>
         </div>
-        <div class="two">
-            <div> {{comment.user.firstname}} </div>
-            <div> {{comment.createdAt}} </div>
-        </div>
+      </div>
     </div>
-    <p> {{comment.text}} </p>
-    <div> {{svg-jar "like" style="height: 20px;" }} 8</div>
+    <div>
+      <p> {{comment.text}} </p>
+      <div> {{svg-jar "like" style="height: 20px;" }}0</div>
+    </div>
 </div>

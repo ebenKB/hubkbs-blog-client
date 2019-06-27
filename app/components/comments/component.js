@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import { set, get } from '@ember/object';
+import { set } from '@ember/object';
 import { inject as service } from '@ember/service';
 
 export default Component.extend({
@@ -24,6 +24,15 @@ export default Component.extend({
 
         createComment(post) {
           this.get('didAddComment')(post);
+        },
+
+        cancelComment() {
+          set(this, 'comment', '');
+          set(this, 'canWriteComment', false);
+        },
+
+        clickOutside() {
+          set(this, 'canWriteComment', false);
         }
     }
 });
