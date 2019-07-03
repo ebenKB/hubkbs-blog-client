@@ -4,9 +4,18 @@
     </div>
     <div class="dashboard-wrapper grid columns-2__14">
       <div class="dashboard-left__pane ">
-        <Dashboard-Item @name="Posts" />
-        <Dashboard-Item @name="Comments" />
-        <Dashboard-Item @name="Users" />
+        <Dashboard-Item @name="Posts" 
+            @link="dashboard.post"
+        />
+        <Dashboard-Item @name="Comments" 
+             @link="dashboard.comment"
+        />
+        <Dashboard-Item @name="Users" 
+             @link="dashboard.user"
+        />
+        <Dashboard-Item @name="Category" 
+             @link="dashboard.category"
+        />
       </div>
       <div class="margin-l-r__center container">
         <div class="dashboard-main__action">
@@ -28,13 +37,11 @@
           />
           {{#link-to 'post.new' class="ui button btn green"}}New Post{{/link-to}}
         </div>
-        <div class="actions p-b-10 p-t-10">
+        {{!-- <div class="actions p-b-10 p-t-10">
           <div> {{svg-jar "dustbin" width="15px" height="15px"}} </div>
-        </div>
-        <FormFields::Table 
-            @rows={{rows}}
-            @tableContent={{model.posts}}
-        />
+        </div> --}}
+          {{outlet}}
       </div>
+       {{currentModel}}
     </div>
 </Layout>

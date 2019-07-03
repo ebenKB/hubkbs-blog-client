@@ -9,9 +9,9 @@ export default DS.RESTAdapter.extend(DataAdapterMixin, {
     authorize(xhr) {
         let { access_token } = this.get('session.data.authenticated');
         if (isPresent(access_token)) {
-          xhr.setRequestHeader('Authorization', `Bearer ${access_token}`);
+            xhr.setRequestHeader('Authorization', `Bearer ${access_token}`);
         }
-      },
+    },
 
     host:config.host,
     namespace:config.namespace,

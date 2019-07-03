@@ -24,6 +24,7 @@ export default Controller.extend({
 
       likePost() {
         if(this.session.isAuthenticated) {
+          console.log('this is the toggle', this.didToggleLike)
           this.toggleProperty('didToggleLike');
           const user_id = get(this, 'currentUser.user.id');
           if (get(this, 'model').likes.includes(user_id)) {
@@ -33,6 +34,7 @@ export default Controller.extend({
             get(this, 'model').likes.addObject(user_id);
           }
 
+          console.log('this is the model', get(this, 'model'));
           // persist the records
           setTimeout(() => {
             if(this.didToggleLike) {

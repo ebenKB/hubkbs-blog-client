@@ -192,4 +192,22 @@ a {
         margin: auto;
         padding: 0 10px;
     }
+
+    .container-very-small {
+      width: 96%;
+      margin: auto;
+    }
+}
+
+
+table tr .action {
+  display: none;
+}
+
+table tr:hover {
+  background: var(--ap-offwhite);
+}
+
+table tr:hover .action {
+  display: block;
 }

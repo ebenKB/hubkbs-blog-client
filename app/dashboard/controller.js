@@ -1,12 +1,20 @@
 import Controller from '@ember/controller';
-import { set } from '@ember/object';
+import { set, get, computed } from '@ember/object';
 
 export default Controller.extend({
-  
-  limit: 10,
+    currentModel : null,
+    limit: 10,
+    // data: computed('currentModel', () => {
+    //     return get(this, 'model').post;
+    // }),
+
+    actions: {
+        // _changeCurrentModel(name) {
+        //     set(this, 'currentModle', name);
+        // }
+    },
     init() {
-      this._super();
-      set(this, 'rows',['Action','Title', 'Body','Created By', 'Created at']);
-      set(this, 'filter', ['A-Z','Z-A', 'title', 'body', 'date']);
+        this._super();
+        set(this, 'filter', ['A-Z','Z-A', 'title', 'body', 'date']);
     }
 });

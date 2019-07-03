@@ -1,19 +1,19 @@
 <table class="ui celled table">
     <thead>
       <tr>
-        {{#each rows as |row| }}
-          <th> {{row}} </th>
+        {{#each columns as |column| }}
+          <th> {{column.name}} </th>
         {{/each}}
       </tr>
     </thead>
     <tbody>
-      {{#each tableContent as |content| }}
+      {{#each rows as |data| }}
           <tr class="">
-              <td>[ ]</td>
-              <td> {{content.title}} </td>
-              <td>{{content.postCaption}}</td>
-              <td> {{content.author.firstname}} </td>
-              <td>{{moment-from-now content.createdAt}} </td>
+              <td> <div class="action" onclick={{action "tableAction" data}}> {{svg-jar "dustbin" width="15px" height="15px"}} </div></td>
+              <td> {{data.title}} </td>
+              <td>{{data.postCaption}}</td>
+              <td> {{data.author.firstname}} </td>
+              <td>{{moment-from-now data.createdAt}} </td>
           </tr>
       {{/each}}
     </tbody>

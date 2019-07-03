@@ -28,3 +28,13 @@
 .blog-content {
   padding: 0 40px;
 }
+
+.blog-content p {
+  line-height: 1.6;
+}
+
+@media only screen and (max-width: 768px) {
+  .blog-content {
+    padding: 0 15px;
+  }
+}
