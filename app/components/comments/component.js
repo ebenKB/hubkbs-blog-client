@@ -9,31 +9,31 @@ export default Component.extend({
   post: null,
   comment: '',
 
-    actions: {
-        toggleComments() {
-            this.get('toggleComments')();
-        },
+  actions: {
+    toggleComments() {
+      this.get('toggleComments')();
+    },
 
-        showCommentText() {
-            this.get('showCommentText')();
-        },
+    showCommentText() {
+      this.get('showCommentText')();
+    },
 
-        canWriteComment() {
-          this.toggleProperty('canWriteComment');
-        },
+    canWriteComment() {
+      this.toggleProperty('canWriteComment');
+    },
 
-        createComment(post) {
-          this.get('didAddComment')(post);
-        },
+    createComment(post) {
+      this.get('didAddComment')(post);
+    },
 
-        cancelComment() {
-          set(this, 'comment', '');
-          set(this, 'canWriteComment', false);
-        },
+    cancelComment() {
+      set(this, 'comment', '');
+      set(this, 'canWriteComment', false);
+    },
 
-        clickOutside() {
-          set(this, 'canWriteComment', false);
-        }
+    clickOutside() {
+      set(this, 'canWriteComment', false);
     }
+  }
 });
 

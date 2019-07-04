@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = function(environment) {
-  let ENV = {
+  const ENV = {
     modulePrefix: 'hubkbs-blog',
     environment,
     rootURL: '/',
@@ -29,11 +29,11 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.host = "http://localhost:8080",
+    ENV.host = 'http://localhost:8080',
     // ENV.host = "https://hubkbsblog.herokuapp.com",
-    ENV.namespace = "api/v1",
+    ENV.namespace = 'api/v1',
     ENV.APP.usingCors = true;
-		ENV.APP.corsWithCreds = true;
+    ENV.APP.corsWithCreds = true;
   }
 
   if (environment === 'test') {

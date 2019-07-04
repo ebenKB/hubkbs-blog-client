@@ -5,7 +5,7 @@ module('Unit | Route | post/new', function(hooks) {
   setupTest(hooks);
 
   test('it exists', function(assert) {
-    let route = this.owner.lookup('route:post/new');
+    const route = this.owner.lookup('route:post/new');
     assert.ok(route);
   });
 });

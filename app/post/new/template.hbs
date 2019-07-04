@@ -1,44 +1,44 @@
 <Layout class="">
-    <div class="margin-auto container">
-        <div class="margin-l-r__center container grid">
-            <div class="form-wrapper p-t-80">
-                <h2 class="p-b-30 p-t-30">Create New Blog Post</h2>
-                {{#with (changeset model.posts PostValidator) as |changeset|}}
-                    <form>
-                        <div class="ui input">
-                            <FormFields::Input
-                                @property="title"
-                                @placeholder="What is the title of the post"
-                                @onChange={{action "validate" }}
-                                @classNames="ui input"
-                                @changeset={{changeset}}
-                            />
-                        </div>
-                        <div class="ui input input-block">
-                            <label for="image">Please select an image for the post</label>
-                            <FormFields::File 
-                                @inputID="postImage"
-                                @onChange={{action "fileChange" }}
-                            />
-                        </div>
-                        <FormFields::Dropdown 
-                            @heading="Add a Category"
-                            @options={{model.categories}}
-                            @property={{category}}
-                            @dataValue="name"
-                            @changeset={{changeset}}
-                        />
-                        <div class="m-t-50">
-                            <FormFields::wysiwyg 
-                                @property="body"
-                                @changeset={{changeset}}
-                            />
-                        </div>
-                        <button class="rounded btn default m-r-10" {{action "rollback" changeset }}>Cancel</button>
-                        <button class="rounded btn primary m-t-40" {{action "createPost" changeset}} disabled={{changeset.isInvalid}}>Create Post</button>
-                    </form>
-                {{/with}}
+  <div class="margin-auto container">
+    <div class="margin-l-r__center container grid">
+      <div class="form-wrapper p-t-80">
+        <h2 class="p-b-30 p-t-30">Create New Blog Post</h2>
+        {{#with (changeset model.posts PostValidator) as |changeset|}}
+          <form>
+            <div class="ui input">
+              <FormFields::Input
+                @property="title"
+                @placeholder="What is the title of the post"
+                @onChange={{action "validate" }}
+                @classNames="ui input"
+                @changeset={{changeset}}
+              />
             </div>
-        </div>
+            <div class="ui input input-block">
+              <label for="image">Please select an image for the post</label>
+              <FormFields::File 
+                @inputID="postImage"
+                @onChange={{action "fileChange" }}
+              />
+            </div>
+            <FormFields::Dropdown 
+              @heading="Add a Category"
+              @options={{model.categories}}
+              @property={{category}}
+              @dataValue="name"
+              @changeset={{changeset}}
+            />
+            <div class="m-t-50">
+              <FormFields::wysiwyg 
+                @property="body"
+                @changeset={{changeset}}
+              />
+            </div>
+            <button class="rounded btn default m-r-10" {{action "rollback" changeset }}>Cancel</button>
+            <button class="rounded btn primary m-t-40" {{action "createPost" changeset}} disabled={{changeset.isInvalid}}>Create Post</button>
+          </form>
+        {{/with}}
+      </div>
     </div>
+  </div>
 </Layout>

@@ -1,11 +1,12 @@
 /* eslint-disable ember/new-module-imports */
 import Component from '@ember/component';
 import { inject as service } from '@ember/service';
-import { get, computed } from '@ember/object';
+import { get } from '@ember/object';
 
 export default Component.extend({
+  session: service(),
   post: null,
-  likes:0,
+  likes: 0,
 
   actions: {
     likePost() {

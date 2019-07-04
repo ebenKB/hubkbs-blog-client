@@ -3,11 +3,11 @@ import Component from '@ember/component';
 export default Component.extend({
   type: 'file',
   classNames: 'ui input',
-  inputID:null,
+  inputID: null,
 
   actions: {
-      onChange(){
-        this.get('onChange')();
-      }
+    onChange(){
+      this.get('onChange')();
+    }
   }
 });

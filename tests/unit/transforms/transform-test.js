@@ -6,7 +6,7 @@ module('Unit | Transform | array', function(hooks) {
 
   // Replace this with your real tests.
   test('it exists', function(assert) {
-    let transform = this.owner.lookup('transform:array');
+    const transform = this.owner.lookup('transform:array');
     assert.ok(transform);
   });
 });

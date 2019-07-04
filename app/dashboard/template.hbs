@@ -1,47 +1,44 @@
 <Layout @classes="margin-auto">
-    <div class="dashboard-header">
-      <h2>Dashboard</h2>
+  <div class="dashboard-header">
+    <h2>Dashboard</h2>
+  </div>
+  <div class="dashboard-wrapper grid columns-2__14">
+    <div class="dashboard-left__pane ">
+      <Dashboard-Item @name="Posts" 
+        @link="dashboard.post"
+      />
+      <Dashboard-Item @name="Comments" 
+        @link="dashboard.comment"
+      />
+      <Dashboard-Item @name="Users" 
+        @link="dashboard.user"
+      />
+      <Dashboard-Item @name="Category" 
+        @link="dashboard.category"
+      />
     </div>
-    <div class="dashboard-wrapper grid columns-2__14">
-      <div class="dashboard-left__pane ">
-        <Dashboard-Item @name="Posts" 
-            @link="dashboard.post"
-        />
-        <Dashboard-Item @name="Comments" 
-             @link="dashboard.comment"
-        />
-        <Dashboard-Item @name="Users" 
-             @link="dashboard.user"
-        />
-        <Dashboard-Item @name="Category" 
-             @link="dashboard.category"
-        />
-      </div>
-      <div class="margin-l-r__center container">
-        <div class="dashboard-main__action">
-          <div class="ui input">
-            <FormFields::Input 
-                @value={{title}}
-                @placeholder="Enter the search term"
-                @classNames="ui input wd-400"
-            />
-            <FormFields::Input 
-                @value={{limit}}
-                @placeholder="Search Limit"
-                @classNames="ui input"
-            />
-          </div>
-          <FormFields::Dropdown 
-            @heading="Filter By:"
-            @options={{filter}}
+    <div class="margin-l-r__center container">
+      <div class="dashboard-main__action">
+        <div class="ui input">
+          <FormFields::Input 
+            @value={{title}}
+            @placeholder="Enter the search term"
+            @classNames="ui input wd-400"
           />
-          {{#link-to 'post.new' class="ui button btn green"}}New Post{{/link-to}}
+          <FormFields::Input 
+            @value={{limit}}
+            @placeholder="Search Limit"
+            @classNames="ui input"
+          />
         </div>
-        {{!-- <div class="actions p-b-10 p-t-10">
-          <div> {{svg-jar "dustbin" width="15px" height="15px"}} </div>
-        </div> --}}
-          {{outlet}}
+        <FormFields::Dropdown 
+          @heading="Filter By:"
+          @options={{filter}}
+        />
+        {{#link-to "post.new" class="ui button btn green"}}New Post{{/link-to}}
       </div>
-       {{currentModel}}
+        {{outlet}}
     </div>
+    {{currentModel}}
+  </div>
 </Layout>

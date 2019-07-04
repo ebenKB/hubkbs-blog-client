@@ -55,88 +55,88 @@
   }
   
 body {
-    margin: 0;
-    padding: 0;
-    font-family: "AvenirNext";
-    font-size: 1rem;
-    color: var(--dark);
+  margin: 0;
+  padding: 0;
+  font-family: "AvenirNext";
+  font-size: 1rem;
+  color: var(--dark);
 }
 
 h1 {
-    font-size: 4.0rem;
-    font-family: "maisonNeueBold";
+  font-size: 4.0rem;
+  font-family: "maisonNeueBold";
 }
 
 h2 {
-    font-family: "AvenirNext";
+  font-family: "AvenirNext";
 }
 
 p {
-    font-size: 1.30rem;
+  font-size: 1.30rem;
 }
 
 a {
-    text-decoration: none;
-    color: var(--dark)
+  text-decoration: none;
+  color: var(--dark)
 }
 
 .clickable {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .cta:hover {
-    color: var( --btn-primary__color);
+  color: var( --btn-primary__color);
 }
 
 .cta:hover svg {
-    fill:var( --btn-primary__color);
+  fill:var( --btn-primary__color);
 }
 
 .inline {
-    display: inline-flex;
-    align-items: center;
-    align-self: center;
+  display: inline-flex;
+  align-items: center;
+  align-self: center;
 }
 
 .title h2 {
-    font-size: 3.0rem;
-    font-weight: 600;
+  font-size: 3.0rem;
+  font-weight: 600;
 }
 
 .light-caption {
-    color: var(--ap-lt-gray);
+  color: var(--ap-lt-gray);
 }
 
 .light-caption * {
-    color: var(--ap-lt-gray)
+  color: var(--ap-lt-gray)
 }
 
 .brighten {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .container {
-    width: 65%;
-    padding: 0 40px;
+  width: 65%;
+  padding: 0 40px;
 }
 
 .container-small {
-    width: 60%;
-    margin: auto;
+  width: 60%;
+  margin: auto;
 }
 
 .container-very-small {
-    width: 40%;
-    margin: auto;
+  width: 40%;
+  margin: auto;
 }
 
 .container-very-small__left {
-    width: 40%;
-    /* margin: auto; */
+  width: 40%;
+  /* margin: auto; */
 }
 
 .margin-auto {
-    margin: auto;
+  margin: auto;
 }
 
 .margin-l-r__center {
@@ -144,18 +144,18 @@ a {
 }
 
 .layout {
-    min-height: 80vh;
-    margin-bottom: 5vh;
+  min-height: 80vh;
+  margin-bottom: 5vh;
 }
 
 .md-wrapper {
-    width: 90%;
+  width: 90%;
 }
 
 
 .col-60 {
-    width: 60%;
-    margin: auto;
+  width: 60%;
+  margin: auto;
 }
 
 .col-70 {
@@ -164,17 +164,17 @@ a {
 }
 
 .bdr-btn {
-    border-bottom: 1px solid #dae1e7;
+  border-bottom: 1px solid #dae1e7;
 }
 
 .small-bdr {
-    width: 140px;
-    margin: auto;
-    margin-bottom: 40px;
+  width: 140px;
+  margin: auto;
+  margin-bottom: 40px;
 }
 
 .md-text {
-    font-size: 1.2rem
+  font-size: 1.2rem
 }
 
 .rounded {
@@ -182,21 +182,21 @@ a {
 }
 
 .caption {
-    font-size: 1.25rem;
-    line-height: 1.5;
+  font-size: 1.25rem;
+  line-height: 1.5;
 }
 
 @media only screen and (max-width:768px){
-    .container {
-        width: 90%;
-        margin: auto;
-        padding: 0 10px;
-    }
+  .container {
+    width: 90%;
+    margin: auto;
+    padding: 0 10px;
+  }
 
-    .container-very-small {
-      width: 96%;
-      margin: auto;
-    }
+  .container-very-small {
+    width: 96%;
+    margin: auto;
+  }
 }
 
 

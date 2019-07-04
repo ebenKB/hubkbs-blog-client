@@ -1,14 +1,14 @@
 <div class="action-group slide-in_left">
-     <div class="blog-actions">
-        <div class="inline" role="button" {{action 'likePost' post}} > 
-            {{svg-jar "love"  style="width: 40px;" class="love" }}
-            <span class="m-t-10"> {{ post.tags }} </span>
-        </div>
-        <div>
-            {{#link-to "post.new" }}
-                {{svg-jar "edit" width="40px" height="50px" }}
-            {{/link-to}}
-        </div>
-        <div role="button" {{action 'likePost' post}} >{{svg-jar "speech-bubble" style="width: 20px;"}}</div>
+  <div class="blog-actions">
+    <div class="inline" role="button" {{action "likePost" post}} > 
+      {{svg-jar "love"  style="width: 40px;" class="love" }}
+      <span class="m-t-10"> {{ post.tags }} </span>
     </div>
+    <div>
+      {{#link-to "post.new" }}
+        {{svg-jar "edit" width="40px" height="50px" }}
+      {{/link-to}}
+    </div>
+    <div role="button" {{action "likePost" post}} >{{svg-jar "speech-bubble" width="20px"}}</div>
+  </div>
 </div>

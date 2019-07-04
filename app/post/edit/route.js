@@ -6,8 +6,8 @@ export default Route.extend({
     let post = null;
     post = get(this, 'store').peekRecord('post', id);
 
-    if(post == null) {
-      post =this.store.findRecord('post', id);
+    if (post == null) {
+      post = this.store.findRecord('post', id);
     }
     return post;
   }
