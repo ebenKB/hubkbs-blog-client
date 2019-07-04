@@ -1,7 +1,8 @@
+/* eslint-disable no-duplicate-imports */
 /* eslint-disable no-undef */
 import Service from '@ember/service';
 // import {  get } from '@ember/object';
-// import { inject as service } from '@ember/service';
+import { inject as service } from '@ember/service';
 import RSVP from 'rsvp';
 import { isEmpty } from '@ember/utils';
 
