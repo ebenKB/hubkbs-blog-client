@@ -3,6 +3,10 @@
     /* height: 256px; */
 }
 
+.post-content a:hover {
+  color: var(--ap-black);
+}
+
 .post-caption {
 
 }

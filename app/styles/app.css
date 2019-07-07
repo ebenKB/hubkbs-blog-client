@@ -67,8 +67,12 @@ h1 {
   font-family: "maisonNeueBold";
 }
 
-h2 {
+h2, h3 {
   font-family: "AvenirNext";
+}
+
+h3 {
+  font-size: 1.5rem;
 }
 
 p {
@@ -183,6 +187,11 @@ a {
 
 .caption {
   font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.small-caption {
+  font-size: 0.95rem;
   line-height: 1.5;
 }
 
