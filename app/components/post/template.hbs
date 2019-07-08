@@ -1,5 +1,5 @@
 <div class="post-content m-b-20">
-  {{#link-to "post.show" post.id class="post-heading grid columns-12__4 grid-center p-t-10"}}
+  {{#link-to "post.show" post.id class="post-heading grid columns-12__4 grid-center grid-gap__10 p-t-10"}}
     <div class="">
       <h3 class=" brighten">{{post.title}} </h3>
     </div>
@@ -7,9 +7,9 @@
       <img src={{post.image}} alt="" class="rounded img-fit">
     </div>
   {{/link-to}}
-		<div class="small-caption brighten grid columns-2__14 grid-center">
-      <div>
-        {{svg-jar "user" class="img-xxl"}}
+		<div class="small-caption brighten grid columns-2__14 grid-center grid-gap__10 m-t-15 m-b-15">
+      <div class="fluid-logo">
+        {{svg-jar "user" class=""}}
       </div>
       <div>
         <span>By: {{post.author.firstname}} {{post.author.lastname}}</span>

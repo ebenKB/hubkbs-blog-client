@@ -18,3 +18,9 @@
     background: var(--white);
     font-weight: bold;
 }
+
+@media only screen and (max-width: 768px) {
+  .pagination li {
+    background: transparent;
+  }
+}

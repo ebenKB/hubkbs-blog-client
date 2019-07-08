@@ -17,6 +17,7 @@
 @import 'dashboard.css';
 @import 'create-post.css';
 @import 'pell.css';
+@import 'hamburger.css';
 
 /* include custom fonts */
 @font-face {
@@ -195,19 +196,9 @@ a {
   line-height: 1.5;
 }
 
-@media only screen and (max-width:768px){
-  .container {
-    width: 90%;
-    margin: auto;
-    padding: 0 10px;
-  }
-
-  .container-very-small {
-    width: 96%;
-    margin: auto;
-  }
+.fluid-logo {
+  width: 100%;
 }
-
 
 table tr .action {
   display: none;
@@ -219,4 +210,37 @@ table tr:hover {
 
 table tr:hover .action {
   display: block;
+}
+
+@media only screen and (max-width:768px){
+  .container {
+    width: 90%;
+    margin: auto;
+    padding: 0 10px;
+  }
+
+  .container-very-small {
+    width: 96%;
+    margin: auto;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.35rem;
+  }
+
+  p {
+    font-size: 1.15rem;
+  }
+  
+  .md-wrapper {
+    width: 100%;
+  }
+
+  .title h2 {
+    font-size: 2.0rem;
+  }
 }

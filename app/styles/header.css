@@ -2,10 +2,47 @@
     align-items: center;
     display: inline-flex;
     padding: 10px;
+    margin-right: 10px;
+    margin-left: 50px;
+}
+
+.menu {
+  text-align: right;
 }
 
 .menu ul li {
     list-style: none;
     display: inline;
     padding: 0 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .menu {
+    text-align: left;
+    box-shadow: 0 1px 3px 0 #bfbfbf;
+    border-radius: 5px;
+  }
+
+  .menu ul li {
+    display: block;
+    padding: 10px 0;
+  }
+
+  .menu ul li a {
+    display: block;
+  }
+
+  .menu ul li a + a {
+    margin-top: 20px !important;
+  }
+
+  .logo {
+    margin: 0;
+    width: 100%;
+  }
+
+  .logo .img-sm {
+    width: 65%;
+    margin: 0;
+  }
 }
