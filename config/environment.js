@@ -50,6 +50,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     ENV.host = 'https://hubkbsblog.herokuapp.com/';
+    ENV.namespace = 'api/v1';
     // here you can enable a production-specific feature
   }
 
