@@ -9,8 +9,8 @@
       <div class="form-wrapper">
         <h2>login</h2>
         <form action="" class="user-form">
-          {{input value=email  placeholder="email"}}
-          {{input value=password placeholder="password" type="password"}}
+          {{input value=email  placeholder="email" id="email"}}
+          {{input value=password placeholder="password" type="password" id="password"}}
           <button class="rounded btn primary" type="submit" {{action "authenticate"}}>Submit</button>
         </form>
         <h5>

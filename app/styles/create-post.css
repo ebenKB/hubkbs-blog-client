@@ -3,6 +3,10 @@
     margin: auto;
 }
 
+.container .form-wrapper {
+  width: 100%;
+}
+
 .form-wrapper form .input {
     width: 100%;
 }

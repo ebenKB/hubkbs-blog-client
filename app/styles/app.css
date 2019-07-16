@@ -211,12 +211,28 @@ table tr:hover {
 table tr:hover .action {
   display: block;
 }
+/* 
+.hide {
+  display: none;
+}
 
+.show {
+  display: block;
+} */
 @media only screen and (max-width:768px){
   .container {
     width: 90%;
     margin: auto;
     padding: 0 10px;
+  }
+
+  .container .container {
+    width: 100%;
+  }
+  
+  .col-60,
+  .col-70 {
+    width: 90%;
   }
 
   .container-very-small {

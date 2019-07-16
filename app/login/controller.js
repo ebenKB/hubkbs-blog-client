@@ -11,7 +11,7 @@ export default Controller.extend({
       const { email, password } = this.getProperties('email', 'password');
       this.get('session').authenticate('authenticator:oauth2-custom', email, password)
         .then(() => {
-          this.transitionToRoute('/');
+          // this.transitionToRoute('/');
         })
         .catch(() => {
           // you can set the error to the login error message

@@ -1,8 +1,13 @@
 import Component from '@ember/component';
+import { set } from '@ember/object';
+import $ from 'jquery';
 
 export default Component.extend({
+  hasExpanded: false,
+
   didInsertElement() {
     this._super();
+    // $('#menu-options').hide();
 
     // const mediaMob = document.getElementById('hamburger');
     // if (mediaMob != null) {
@@ -40,5 +45,23 @@ export default Component.extend({
     //     }
     //   });
     // }
+  },
+
+  actions: {
+    expandBurger() {
+      if (!this.hasExpanded) { // expand the menu
+        $('#menu-options').show();
+        $('#burger-top').addClass('burger-top-rotate');
+        $('#burger-down').addClass('burger-down-rotate');
+        $('#burger-mid').hide();
+        set(this, 'hasExpanded', true);
+      } else { // collapse the menu
+        $('#menu-options').hide();
+        $('#burger-mid').show();
+        $('#burger-top').removeClass('burger-top-rotate');
+        $('#burger-down').removeClass('burger-down-rotate');
+        set(this, 'hasExpanded', false);
+      }
+    }
   }
 });

@@ -6,6 +6,7 @@ const Router = EmberRouter.extend({
   rootURL: config.rootURL
 });
 
+// eslint-disable-next-line array-callback-return
 Router.map(function() {
   this.route('post', { path: '/' }, function() {
     this.route('show', { path: '/posts/:id'});
