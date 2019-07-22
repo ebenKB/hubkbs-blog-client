@@ -33,7 +33,7 @@ export default Controller.extend({
             get(this, 'model').save();
           }
         }, 3000);
-      } else alert('pls login');
+      } else this.transitionToRoute('login');
     },
 
     didAddComment(post) {
