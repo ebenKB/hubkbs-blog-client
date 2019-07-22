@@ -13,9 +13,7 @@ export default Controller.extend({
   author: null,
   category: null,
   // eslint-disable-next-line ember/avoid-leaking-state-in-ember-objects
-  options: {
-
-  },
+  // options: {},
 
   actions: {
     createPost(changeset) {

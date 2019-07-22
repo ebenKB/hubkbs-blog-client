@@ -10,6 +10,7 @@ export default DS.Model.extend({
   comments: DS.hasMany('comment'),
   likes: DS.attr('array'),
   category: DS.attr('string'),
+  slug: DS.attr('string'),
 
   postCaption: computed('body', function() {
     return `${this.body.split(' ').slice(0, 20).join(' ')} ...`;

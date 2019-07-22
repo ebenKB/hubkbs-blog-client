@@ -16,7 +16,7 @@
       <li>
         {{#if session.isAuthenticated }}
           <div class="ui top left pointing dropdown teal circular icon button">
-            EA
+            {{currentUser.user.initials}}
             <i class="teal circular label"></i>
             <div class="menu" style="left: 0;">
               <div class="header">{{currentUser.user.firstname}} {{currentUser.user.lastname}} </div>

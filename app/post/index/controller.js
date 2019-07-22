@@ -4,11 +4,13 @@ import pagedArray from 'ember-cli-pagination/computed/paged-array';
 
 
 export default Controller.extend({
-  queryParams: ['page', 'perPage'],
+  queryParams: ['page', 'perPage', 'limit'],
 
   // set default values for paging
   page: 1,
   perPage: 10,
+  isConfirmed: true,
+  limit: 10,
 
   // get only the first two posts
   recentPost: computed('model', function() {

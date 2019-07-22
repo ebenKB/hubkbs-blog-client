@@ -10,9 +10,9 @@ export default Route.extend(ApplicationRouteMixin, {
     return this._loadCurrentUser();
   },
 
-  sessionAuthenticated() {
+  async sessionAuthenticated() {
     this._super(...arguments);
-    this._loadCurrentUser();
+    await this._loadCurrentUser();
   },
 
   _loadCurrentUser() {

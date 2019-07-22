@@ -1,0 +1,6 @@
+.ui.circular.button {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}

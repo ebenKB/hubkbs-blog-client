@@ -6,17 +6,24 @@ import { isPresent } from '@ember/utils';
 
 export default DS.RESTAdapter.extend(DataAdapterMixin, {
   session: service(),
+  host: config.host,
+  namespace: config.namespace,
+
   authorize(xhr) {
-    const { access_token } = this.get('session.data.authenticated');
-    if (isPresent(access_token)) {
-      xhr.setRequestHeader('Authorization', `Bearer ${access_token}`);
+    const { token } = this.get('session.data.authenticated');
+    console.log('trying to authroize. this is the list');
+    xhr.setRequestHeader('Authorization', `Bearer ${token}`);
+    if (isPresent(token)) {
+      console.log('there is a token');
+      xhr.setRequestHeader('Authorization', `Bearer ${token}`);
+    } else {
+      console.log('there is no token present');
     }
   },
 
-  host: config.host,
-  namespace: config.namespace,
   // eslint-disable-next-line ember/avoid-leaking-state-in-ember-objects
   headers: {
+    // 'Content-Type': 'application/json',
     'Acess-Control-Allow-Origin': 'http://localhost:8080/api/v1/posts',
   },
 });
