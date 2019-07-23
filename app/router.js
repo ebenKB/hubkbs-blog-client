@@ -9,7 +9,7 @@ const Router = EmberRouter.extend({
 // eslint-disable-next-line array-callback-return
 Router.map(function() {
   this.route('post', { path: '/' }, function() {
-    this.route('show', { path: '/posts/:id/:slug'});
+    this.route('show', { path: '/posts/:id/:slug'}, function() {});
     this.route('new', { path: 'posts/new'});
     this.route('edit', { path: 'posts/:id/edit'});
   });

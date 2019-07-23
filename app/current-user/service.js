@@ -10,7 +10,6 @@ export default Service.extend({
   store: service(),
 
   load() {
-    console.log('loading the current user');
     const userId = this.get('session.data.authenticated.user_id');
     if (!isEmpty(userId)) {
       // alert('it is not empty');

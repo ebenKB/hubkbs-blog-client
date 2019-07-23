@@ -21,9 +21,10 @@
     @showCommentText={{action "showCommentText"}}
     @didAddComment={{action "didAddComment"}} 
   />
-  <Actions::Like
+  {{outlet}}
+  {{!-- <Actions::Like
     @post={{model}}
     @didLikePost={{ action "likePost" model }}
-  />
+  /> --}}
 </Layout>
 
