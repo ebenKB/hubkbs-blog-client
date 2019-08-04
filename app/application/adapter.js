@@ -24,6 +24,7 @@ export default DS.RESTAdapter.extend(DataAdapterMixin, {
   // eslint-disable-next-line ember/avoid-leaking-state-in-ember-objects
   headers: {
     // 'Content-Type': 'application/json',
-    'Acess-Control-Allow-Origin': 'http://localhost:8080/api/v1/posts',
+    // 'Acess-Control-Allow-Origin': 'http://localhost:8080/api/v1/posts',
+    'Acess-Control-Allow-Origin': 'https://hubkbsblog.herokuapp.com',
   },
 });

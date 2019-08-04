@@ -1,11 +1,11 @@
-<Layout
+{{!-- <Layout
   @hasHeader={{false}}
 >
   <div class="container margin-auto">{{outlet}}</div>
-		<div class="container margin-auto grid grid-center auto auto-columns__3">
+		<div class="container margin-auto grid grid-center grid-gap__10 auto auto-columns__3">
       <div class="two">
         <a href="#">
-          <img src="http://www.moneydigest.sg/wp-content/uploads/2017/01/WAtsons-BOGO.png" alt="">
+          <img src="http://www.moneydigest.sg/wp-content/uploads/2017/01/WAtsons-BOGO.png" alt="" class="img-fit">
         </a>
       </div>
 				<div class="one">
@@ -67,4 +67,75 @@
           </div>
 				</div>
 		</div>
+</Layout> --}}
+
+
+<Layout
+  @hasHeader={{false}}
+>
+  <div class="container margin-auto grid grid-center auto auto-columns__3 grid-gap__10">
+    <div class="two">
+      <a href="http://www.hubkbs.com/covers/" target="_blank">
+        <img src="images/lap-covers.jpg" alt="" class="img-fit">
+      </a>
+    </div>
+    <div class="one">
+      <div class="form-wrapper">
+        <h2>CREATE NEW ACCOUNT</h2>
+            {{#with (changeset model UserValidations) as |changesetObj|}}
+              <form action="" class="user-form">
+                <FormFields::Input
+                  @type="text"
+                  @changeset={{changesetObj}}
+                  @property="firstname"
+                  @classNames="ddd"
+                  @placeholder="Enter your first name"
+                />
+                <FormFields::Input
+                  @type="text"
+                  @changeset={{changesetObj}}
+                  @property="lastname"
+                  @classNames=""
+                  @placeholder="Enter your last name"
+                />
+                <FormFields::Input
+                  @type="email"
+                  @changeset={{changesetObj}}
+                  @property="email"
+                  @classNames=""
+                  @placeholder="Enter your email"
+                />
+                <FormFields::Input
+                  @type="phone"
+                  @changeset={{changesetObj}}
+                  @property="contact"
+                  @classNames=""
+                  @placeholder="Enter your contact"
+                />
+                <FormFields::Input
+                  @type="password"
+                  @changeset={{changesetObj}}
+                  @property="password"
+                  @classNames=""
+                  @placeholder="Choose a password"
+                />
+                <FormFields::Input
+                  @type="password"
+                  @changeset={{changesetObj}}
+                  @property="password_confirmation"
+                  @classNames=""
+                  @placeholder="Confirm your password"
+                />
+                <button class="rounded btn primary" {{action "signup" changesetObj}}>Submit</button>
+              </form>
+            {{/with}}
+            <h5>
+              Already have an account?
+              {{#link-to "login"}} 
+                login 
+              {{/link-to}}
+            </h5>
+      </div>
+    </div>
+  </div>
 </Layout>
