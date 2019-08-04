@@ -30,7 +30,7 @@ export default Base.extend({
     const reqOptions = {
       url: this.tokenEndpoint,
       method: 'POST',
-      mode: 'cors',
+      mode: 'no-cors',
       body: data,
       dataType: JSON,
       headers: {
@@ -39,7 +39,7 @@ export default Base.extend({
     };
 
     return new Promise((resolve, reject) => {
-      fetch(this.tokenEndpoint, reqOptions, {mode: 'no-cors'})
+      fetch(this.tokenEndpoint, reqOptions)
         .then((response) => {
           response.json()
             .then((data) => {
