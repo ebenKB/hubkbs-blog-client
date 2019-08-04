@@ -13,7 +13,7 @@
         <form action="" class="user-form">
           {{input value=email  placeholder="email" id="email"}}
           {{input value=password placeholder="password" type="password" id="password"}}
-          <button class="rounded btn primary" type="submit" {{action "authenticate"}}>Submit</button>
+          <button class="rounded btn primary {{if isAuthenticating "loading"}}" type="submit" {{action "authenticate"}}>Submit</button>
         </form>
         <h5>
           Don't have an account?
