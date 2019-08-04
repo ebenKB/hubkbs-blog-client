@@ -39,7 +39,7 @@ export default Base.extend({
     };
 
     return new Promise((resolve, reject) => {
-      fetch(this.tokenEndpoint, reqOptions)
+      fetch(this.tokenEndpoint, reqOptions, {mode: 'no-cors'})
         .then((response) => {
           response.json()
             .then((data) => {
