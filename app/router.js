@@ -15,7 +15,7 @@ Router.map(function() {
   });
   this.route('login');
   this.route('signup', function() {
-    this.route('confirm', { path: 'signup/:token' });
+    this.route('confirm', { path: '/:token' });
   });
   this.route('dashboard', function() {
     this.route('post', { path: '/'});

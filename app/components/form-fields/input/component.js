@@ -9,8 +9,8 @@ export default Component.extend({
   changeset: null,
   property: null,
   actions: {
-    onChange(changeset){
-      this.get('onChange')(changeset);
+    onChange(){
+      this.get('onChange')();
     }
   }
 });

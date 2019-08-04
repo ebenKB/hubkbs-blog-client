@@ -1,4 +1,6 @@
-<Layout>
+<Layout
+  @hasHeader={{false}}
+>
   <div class="container margin-auto grid grid-center auto auto-columns__3 grid-gap__10">
     <div class="two">
       <a href="http://www.hubkbs.com/covers/" target="_blank">
@@ -15,7 +17,9 @@
         </form>
         <h5>
           Don't have an account?
-          <span> <a href="#">signup</a> </span>
+          {{#link-to "signup"}}
+            signup
+          {{/link-to}}
         </h5>
       </div>
     </div>

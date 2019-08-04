@@ -2,6 +2,9 @@ import Controller from '@ember/controller';
 import { set } from '@ember/object';
 
 export default Controller.extend({
+  queryParams: ['isConfirmed'],
+
+  isConfirmed: true,
   columns: null,
   rows: null,
   init() {
@@ -28,29 +31,10 @@ export default Controller.extend({
         valuePath: 'createdAt'
       }
     ]);
-    // set(this, 'columns', [
-    //     {
-    //         name: `First Name`,
-    //         valuePath: `firstName`
-    //     },
-    //     {
-    //         name: `Last Name`,
-    //         valuePath: `lastName`
-    //     }
-    // ]),
-
-    // set(this, 'rows', [
-    //     {
-    //         firstName: 'Tony',
-    //         lastName: 'Stark',
-    //     },
-    //     {
-    //         firstName: 'Tom',
-    //         lastName: 'Dale',
-    //     }
-    // ])
+  },
+  actions: {
+    deletePost() {
+      console.log('you want to delete this post');
+    }
   }
 });
-
-
-// 'Action','Title', 'Body','Created By', 'Created at'

@@ -19,6 +19,19 @@
     position: absolute;
     height: 80px;
     width: 200px;
-    background: red;
+    background: var(--app-red);
     color: green;
+}
+
+.user-form  input.field-error {
+  border: 1px solid var(--app-red);
+}
+
+.user-form  input.field-success {
+  border: 1px solid var(--app-green);
+}
+.input-error {
+  list-style: none;
+  color: var(--app-red);
+  padding-inline-start: 15px;
 }

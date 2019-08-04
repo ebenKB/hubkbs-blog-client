@@ -4,8 +4,8 @@
   </div>
   <div class="bdr-btn p-t-40"></div>
   <div class="caption text-center p-t-60 p-b-60">
-    <div>by Thomas Birch</div>
-    <div class="light-caption">24th July, 2091</div>
+    <div>{{model.author.fullname}}</div>
+    <div class="light-caption">{{moment-format model.createdAt "ddd, MMM DD YYYY" }} </div>
   </div>
   <div class="blog-image p-b-60">
     <img src=" {{model.image}} " alt="" class="img-fit">
@@ -22,9 +22,9 @@
     @didAddComment={{action "didAddComment"}} 
   />
   {{outlet}}
-  {{!-- <Actions::Like
+  <Actions::Like
     @post={{model}}
     @didLikePost={{ action "likePost" model }}
-  /> --}}
+  />
 </Layout>
 

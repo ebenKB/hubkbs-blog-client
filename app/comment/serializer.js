@@ -9,8 +9,4 @@ export default DS.RESTSerializer.extend(DS.EmbeddedRecordsMixin, {
       deserialize: 'ids'
     }
   },
-  // attrs: {
-  //     // user: { embedded: 'always' }
-  //     user: { serialize: 'records' , deserialize: 'records'},
-  // }
 });

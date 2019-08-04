@@ -212,6 +212,10 @@ table tr:hover {
 table tr:hover .action {
   display: block;
 }
+
+.field-error {
+  border: 1px solid red;
+}
 /* 
 .hide {
   display: none;

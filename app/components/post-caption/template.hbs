@@ -1,10 +1,14 @@
 <div class="post-caption">
-  <a href="posts/{{post.id }}" class="post-img p-all-30">
+  {{!-- <a href="posts/{{post.id }}/{{post.slug}}" class="post-img p-all-30">
     <img src={{post.image}} alt="" class="rounded img-fit">
     <h2 class="brighten"> {{post.title}} </h2>
-  </a>
+  </a> --}}
+  {{#link-to "post.show" post.id post.slug class="post-img p-all-30" }}
+      <img src={{post.image}} alt="" class="rounded img-fit">
+      <h2 class="brighten"> {{post.title}} </h2>
+  {{/link-to}}
   <div class="caption brighten m-t-15 m-b-15">
-    By: James Rooker
+    By: {{post.author.fullname}}
   </div>
   <div class="post-content md-wrapper brighten">
     <p>

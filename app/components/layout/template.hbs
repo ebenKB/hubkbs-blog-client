@@ -1,5 +1,7 @@
 <div class="wrapper">
-  <Header />
+  {{#if hasHeader}}
+    <Header />
+  {{/if}}
   <div class="layout grid {{classes}}">
     {{yield}}
   </div>

@@ -1,7 +1,10 @@
 import Component from '@ember/component';
 
 export default Component.extend({
-  options: null,
+  options: {
+    fontName:'AvenirNext',
+  },
+
   changeset: null,
   property: null,
 });

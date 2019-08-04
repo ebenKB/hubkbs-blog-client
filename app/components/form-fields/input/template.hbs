@@ -1,18 +1,17 @@
-{{input
-  class=classNames
+{{ input
+  class=(concat (if (get changeset.error property) "field-error ") classNames )
   type=type
   placeholder=placeholder
-  keyUp=(action "onChange" changeset)
   value=(get changeset property)
   changeset=changeset
 }}
-
-  {{#if (get changeset.error property)}}
-    <small>
-      <ul style="margin:5px 0 0 125px;font-size: 13px;" class="input-error">
-        {{#each (get (get changeset.error property) "validation") as |message|}}
-          <li>{{message}}</li>
-        {{/each}}
-      </ul>
-    </small>
-  {{/if}}
+{{#if (get changeset.error property)}}
+  <small>
+    <ul style="margin:5px 0 0 5px;font-size: 13px;" class="input-error">
+      {{#each (get (get changeset.error property) "validation") as |message|}}
+        <li>{{message}}</li>
+      {{/each}}
+    </ul>
+  </small>
+{{/if}}
+ {{!-- class=(concat "kt-form__input" (concat " kt-form__input--" property) (if inputDidChange " field-error")) --}}
