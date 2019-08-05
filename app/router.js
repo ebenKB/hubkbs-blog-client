@@ -23,13 +23,17 @@ Router.map(function() {
     this.route('user');
     this.route('category');
   });
-  this.route('protected');
 
   this.route('authenticated', { path: '/auth'}, function() {
     // this.route('dashboard');
     // this.route('dashboard',  { resetNamespace: true });
     // this.route('post',  { path: 'posts/new', resetNamespace: true });
     // this.route('edit', { path: 'posts/:id/edit'});
+  });
+
+  this.route('password', function() {
+    this.route('reset');
+    this.route('confirm', { path: '/:token'});
   });
 });
 

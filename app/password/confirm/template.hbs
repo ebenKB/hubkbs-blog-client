@@ -81,52 +81,12 @@
     </div>
     <div class="one">
       <div class="form-wrapper">
-        <h2>CREATE NEW ACCOUNT</h2>
+        <h2>RESET PASSWORD</h2>
             {{#with (changeset model UserValidations) as |changesetObj|}}
               <form action="" class="user-form">
-                <FormFields::Input
-                  @type="text"
-                  @changeset={{changesetObj}}
-                  @property="firstname"
-                  @classNames="ddd"
-                  @placeholder="Enter your first name"
-                />
-                <FormFields::Input
-                  @type="text"
-                  @changeset={{changesetObj}}
-                  @property="lastname"
-                  @classNames=""
-                  @placeholder="Enter your last name"
-                />
-                <FormFields::Input
-                  @type="email"
-                  @changeset={{changesetObj}}
-                  @property="email"
-                  @classNames=""
-                  @placeholder="Enter your email"
-                />
-                <FormFields::Input
-                  @type="phone"
-                  @changeset={{changesetObj}}
-                  @property="contact"
-                  @classNames=""
-                  @placeholder="Enter your contact"
-                />
-                <FormFields::Input
-                  @type="password"
-                  @changeset={{changesetObj}}
-                  @property="password"
-                  @classNames=""
-                  @placeholder="Choose a password"
-                />
-                <FormFields::Input
-                  @type="password"
-                  @changeset={{changesetObj}}
-                  @property="password_confirmation"
-                  @classNames=""
-                  @placeholder="Confirm your password"
-                />
-                <button class="rounded btn primary {{if isAuthenticating "loading"}}" {{action "signup" changesetObj}}>Submit</button>
+                {{input value=password  placeholder="password"}}
+                {{input value=password_confirmation  placeholder="Password confirmation"}}
+                <button class="rounded btn primary {{if isAuthenticating "loading"}}" {{action "confirmPasswordReset"}}>Submit</button>
               </form>
             {{/with}}
             <h5>

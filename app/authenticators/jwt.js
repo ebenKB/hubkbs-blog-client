@@ -7,13 +7,10 @@ export default Base.extend({
   tokenEndpoint: `${config.host}/${config.namespace}/users/login`,
 
   restore(data) {
-    console.log('this is the data in the restore function', data.token);
     return new Promise((resolve, reject) => {
       if (!isEmpty(data.token)) {
-        console.log('it is not empty');
         resolve(data);
       } else {
-        console.log('it is empty');
         reject();
       }
     });
@@ -35,29 +32,31 @@ export default Base.extend({
       dataType: JSON,
       headers: {
         'Content-Type': 'application/json',
-        'Acess-Control-Allow-Origin': 'https://hubkbsblog.herokuapp.com',
       },
     };
 
     return new Promise((resolve, reject) => {
       fetch(this.tokenEndpoint, reqOptions)
         .then((response) => {
-          response.json()
-            .then((data) => {
+          if (response.ok) {
+            response.json()
+              .then((data) => {
               // use run to wrapp asyn operation in ember
-              run(() => {
-                if (! data.error) {
-                  resolve({ token: data.token, user_id: data.user._id });
-                } else {
-                  reject(data.error);
-                }
+                run(() => {
+                  if (! data.error) {
+                    resolve({ token: data.token, user_id: data.user._id });
+                  } else {
+                    reject(data.error);
+                  }
+                });
+              }, (error) => {
+                run(() => {
+                  reject(error);
+                });
               });
-            }, (error) => {
-              run(() => {
-                reject(error);
-              });
-            });
-        });
+          } else if (response.status == 404) reject('invalid credentials');
+        })
+        .catch((err) => reject(err));
     });
   },
 
