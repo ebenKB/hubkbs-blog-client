@@ -30,11 +30,12 @@ export default Base.extend({
     const reqOptions = {
       url: this.tokenEndpoint,
       method: 'POST',
-      mode: 'no-cors',
+      mode: 'cors',
       body: data,
       dataType: JSON,
       headers: {
         'Content-Type': 'application/json',
+        'Acess-Control-Allow-Origin': 'https://hubkbsblog.herokuapp.com',
       },
     };
 
