@@ -20,9 +20,11 @@
             <i class="teal circular label"></i>
             <div class="menu" style="left: 0;">
               <div class="header">{{currentUser.user.firstname}} {{currentUser.user.lastname}} </div>
-              <div class="item">
-                {{#link-to "dashboard" }}Dashboard{{/link-to}}
-              </div>
+                {{#if currentUser.user.isAdmin}}
+                  <div class="item">
+                    {{#link-to "dashboard"}}Dashboard{{/link-to}}
+                  </div>
+                {{/if}}
               <div class="item">
                 {{#link-to "post.new" class=""}}New Post{{/link-to}}
               </div>
