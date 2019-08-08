@@ -24,7 +24,8 @@ export default Controller.extend({
         changeset.validate()
           .then(() => {
             if (changeset.isValid) { // make sure the post is valid before you save it
-              return changeset.save();
+              changeset.save()
+                .then(() => this.transitionToRoute('post'));
             }
           });
       } else this.transitionToRoute('login');
